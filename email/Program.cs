@@ -51,7 +51,15 @@ namespace email
                         int index =Convert.ToInt32(Console.ReadLine()); 
                         emailCimek.RemoveAt(index);
                         break;
-                    case "4": Console.WriteLine("érvényes e-mailok listázása"); break;
+                    case "4": Console.WriteLine("érvényes e-mailok listája:");
+                        foreach (string s in emailCimek)
+                        {
+                            if (s.Contains("@") && s.Contains("."))
+                            {
+                                Console.WriteLine(s);
+                            }
+                        }
+                        break;
                     default: Console.Clear(); Console.WriteLine("Hibás parancs"); break;
 
                 }
