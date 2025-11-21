@@ -8,8 +8,17 @@ namespace email
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
+            List<string> emailCimek = new List<string>();
+            emailCimek.Add("alma@kkszki.hu");
+            emailCimek.Add("Télapo@kkszki.hu");
+            emailCimek.Add("Trup@kkszki.hu");
+            emailCimek.Add("Poloska@kkszki.hu");
+            emailCimek.Add("asdatkkszki.hu");
+            emailCimek.Add("alma.peti@kkszki.hu");
+
             //MENÜVEZÉRLÉS
             while (true)
             {
