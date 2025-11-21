@@ -40,10 +40,13 @@ namespace email
                         int sor = 0;
                         foreach (string s in emailCimek)
                         {
-                            Console.WriteLine($"{sor++} {s}");
+                            Console.WriteLine($"{sor++}. {s}");
                         }
                         break;
-                    case "2": Console.WriteLine("Uj e-mail"); break;
+                    case "2": Console.WriteLine("Adja meg az uj-emailcimet:"); 
+                        string uj = Console.ReadLine();
+                        emailCimek.Add(uj);
+                        break;
                     case "3": Console.WriteLine("e-mail törlese"); break;
                     case "4": Console.WriteLine("érvényes e-mailok listázása"); break;
                     default: Console.Clear(); Console.WriteLine("Hibás parancs"); break;
