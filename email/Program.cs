@@ -11,6 +11,7 @@ namespace email
 
         static void Main(string[] args)
         {
+            //adatszerkezet
             List<string> emailCimek = new List<string>();
             emailCimek.Add("alma@kkszki.hu");
             emailCimek.Add("Télapo@kkszki.hu");
@@ -34,7 +35,14 @@ namespace email
                 {
                     case "0":
                         return;
-                    case "1": Console.WriteLine("E-mail címek listázása"); break;
+                    case "1":
+                        Console.Clear(); Console.WriteLine("E-mail címek:");
+                        int sor = 0;
+                        foreach (string s in emailCimek)
+                        {
+                            Console.WriteLine($"{sor++} {s}");
+                        }
+                        break;
                     case "2": Console.WriteLine("Uj e-mail"); break;
                     case "3": Console.WriteLine("e-mail törlese"); break;
                     case "4": Console.WriteLine("érvényes e-mailok listázása"); break;
