@@ -47,7 +47,10 @@ namespace email
                         string uj = Console.ReadLine();
                         emailCimek.Add(uj);
                         break;
-                    case "3": Console.WriteLine("e-mail törlese"); break;
+                    case "3": Console.WriteLine("Adja meg a torlendo email azonositojat:"); 
+                        int index =Convert.ToInt32(Console.ReadLine()); 
+                        emailCimek.RemoveAt(index);
+                        break;
                     case "4": Console.WriteLine("érvényes e-mailok listázása"); break;
                     default: Console.Clear(); Console.WriteLine("Hibás parancs"); break;
 
